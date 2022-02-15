@@ -43,7 +43,18 @@ A another example of dnsrecon would be this:
 dnsrecon -d website.com -D /usr/share/wordlists/dnsmap.txt -w -f -a -s -b -y -k -w -z --threads 20 -c out.csv -t brt
 ```
 
-This example of dnsrecon will use the wordlist (-D) to bruteforce subdomains(-t brt), filter records that match to wildcard (-f), perform axfr enumeration (-a), perform a reverse lookup ipv4 range (-s), perform bing enumeration (-b), perform yandex enumeration (-y), perform ctr.sh enumeration(-k), perform deep whois enumeration(-w) and perform DNSSEC enumeration(-z) with 20 threads(--threads) and save output(-c out.csv)
+This example of dnsrecon will
+- use the wordlist (-D)
+- to bruteforce subdomains(-t brt)
+- filter records that match to wildcard (-f)
+- perform axfr enumeration (-a)
+- perform a reverse lookup ipv4 range (-s)
+- perform bing enumeration (-b)
+- perform yandex enumeration (-y)
+- perform ctr.sh enumeration(-k)
+- perform deep whois enumeration(-w)
+- perform DNSSEC enumeration(-z) with 20 threads(--threads)
+- save output(-c out.csv)
 With the DNS zone transfer it is possible to replicate DNS databases between DNS servers. In this way, all sub-domains can be read out with just one command. 
 
 Normally this option should only be possible for selected servers. However, you can test whether the function is still available for others by using the "dig" command, for example:
